@@ -1,0 +1,34 @@
+<% layout("/layouts/boilerplate")%>
+
+<body>
+    <div class="profileCont">
+        <h3><%=info.title%></h3>
+        <div class="img" style="background-image: url(<%=info.image%>);"></div>
+        <p><%=info.description%> <br>
+            &#8377;<%=info.price.toLocaleString("en-IN")%> <br>
+            <%=info.location%> <br>
+            <%=info.country%>
+        </p>
+   
+    <div class="btns">
+    <form method="get" action="/list/<%=info._id%>/edit">
+        <button class="change">change</button>
+    </form> 
+    <form method="post" action="/list/<%=info._id%>?_method=DELETE">
+        <button class="dlt">Delete</button>
+    </form>
+    <a method="GET" href="/review/<%=info._id%>"><button class="change" id="review">+add Review</button></a>
+</div>
+</div>
+ <h3 style="margin-left: 15px;">All Reviews</h3>
+<div class="reviews">
+    <%for(r of info.review){%>
+        <div class="single-rv">
+            <p>Rating : <%=r.rating%>/5 <br>
+            Comments :  <%=r.comment%></p>
+          <form method="post" action="/review/<%=info._id%>/<%=r._id%>?_method=DELETE"><button class="dlt">Remove</button></form>
+        </div>
+    <%}%>
+
+</div>
+</body>

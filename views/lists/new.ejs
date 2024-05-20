@@ -1,0 +1,26 @@
+<% layout("/layouts/boilerplate") %> 
+<body>
+    
+    <form method="POST" action="/list">
+        <div class="contener3">
+        <h1>Create a New List</h1>
+        <label for="title">Title</label> <br>
+        <input type="text" id="title" name="title" required> <br>
+        <label for="desc">Description</label> <br>
+        <textarea name="desc" id="desc" cols="30" rows="2" required></textarea> <br>
+        <label for="image">Image Link</label><br>
+        <input type="text" id="image" name="image"><br>
+        <div class="pc">
+       <div class="p"> <label for="price">Price</label><br>
+        <input type="text" id="price" name="price" required> </div><br>
+       <div class="c"><label for="con">Country</label> <br>
+        <input type="text" id="con" name="country" required> </div> 
+    </div>
+        
+        <label for="loc">Location</label><br>
+        <input type="text" id="loc" name="location" required> <br>
+        <br> 
+        <button id="submit">Add</button>
+    </div>
+    </form>
+</body>

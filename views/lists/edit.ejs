@@ -1,0 +1,25 @@
+<% layout("/layouts/boilerplate") %> 
+<body>
+    <form method="post" action="/list/<%=data._id%>?_method=PUT">
+        <div class="contener3">
+            <h1>Edit Your List</h1>
+            <label for="title">Title</label> <br>
+            <input type="text" id="title" name="title" value="<%=data.title%>" required> <br>
+            <label for="desc">Description</label> <br>
+            <textarea name="desc" id="desc" cols="30" rows="2" required><%=data.description%></textarea> <br>
+            <label for="image">Image Link</label><br>
+            <input type="text" id="image" name="image" value="<%=data.image%>" required><br>
+            <div class="pc">
+           <div class="p"> <label for="price">Price</label><br>
+            <input type="text" id="price" name="price" value="<%=data.price%>" required> </div><br>
+           <div class="c"><label for="con">Country</label> <br>
+            <input type="text" id="con" name="country" value="<%=data.country%>" required> </div> 
+        </div>
+            
+            <label for="loc">Location</label><br>
+            <input type="text" id="loc" name="location" value="<%=data.location%>" required> <br>
+            <br> 
+            <button id="submit">Add</button>
+        </div>
+    </form>
+</body>

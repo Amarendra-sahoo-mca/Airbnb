@@ -1,0 +1,13 @@
+<% layout("/layouts/boilerplate")%>
+
+<body>
+    <div class="r-cont">
+    <h2>Leave your Review</h2>
+    <form method="post" action="/review/save/<%=id%>">
+        <label for="rating">Rating</label> <br>
+        <input id="rating" type="range" min="1" max="5" name="rating" > <br>
+        <label for="cmt">Comments</label> <br>
+        <textarea name="comment" id="cmt" cols="30" rows="10" required></textarea>
+       <br> <button class="change">submit</button>
+    </form></div>
+</body>
